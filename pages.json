@@ -3,7 +3,20 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#007AFF",
+				"h5": {
+					"pullToRefresh": {
+						"color": "#C8C7CC"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/self/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#007AFF"
 			}
 		}
 	],
@@ -11,6 +24,26 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": true
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"iconWidth": "40px",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home1.png"
+			},
+			{
+				"pagePath": "pages/self/index",
+				"iconPath": "static/my.png",
+				"selectedIconPath": "static/my1.png"
+			}
+		]
 	}
 }
