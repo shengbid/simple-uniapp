@@ -3,6 +3,9 @@
 		<!-- <image class="logo" src="/static/logo.png"></image> -->
 		<view class="text-area">
 			<text class="title">{{title1}}</text>
+			<navigator url="../detail/index?id=33" hover-class="navigator-hover">
+				<button type="default">跳转到详情页</button>
+			</navigator>
 		</view>
 	</view>
 </template>
