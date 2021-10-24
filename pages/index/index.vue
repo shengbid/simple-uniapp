@@ -4,27 +4,71 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<view>
+			<view class="item" v-for="item in list" :key="item.id">
+				<view class="name">
+					名称: {{item.name}}
+				</view>
+				<view class="name">
+					价格: {{item.price}}
+				</view>
+			</view>
+		</view>
+		<view class="child">
+			<userInfo @changeName="changeName" :userInfo="user" />
+		</view>
+		<view class="name">
+			改变的名字{{name}}
+		</view>
 	</view>
 </template>
 
 <script>
+	import userInfo from '@/components/userInfo.vue'
 	export default {
+		components: {
+			userInfo
+		},
 		data() {
 			return {
-				title: 'Hello6'
+				title: 'Hello6',
+				name: '',
+				user: {
+					name: '张三',
+					age: 44
+				},
+				list: [
+					{
+						id: 1,
+						name: '商品1',
+						price: 9999
+					},
+					{
+						id: 2,
+						name: '商品2',
+						price: 555
+					},
+					{
+						id: 3,
+						name: '商品3',
+						price: 800
+					}
+				]
 			}
 		},
 		onLoad() {
 
+		},
+		methods: {
+			changeName(name) {
+				this.name = name
+			}
 		},
 		onPullDownRefresh() {
 			console.log('refresh');
 			setTimeout(function () {
 				uni.stopPullDownRefresh();
 			}, 1000);
-		},
-		methods: {
-
 		}
 	}
 </script>
