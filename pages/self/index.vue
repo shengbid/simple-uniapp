@@ -53,7 +53,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	@import url("./my.css");
 	@import url("/static/iconfont/style.css");
 	.content {
@@ -93,5 +93,8 @@
 	.edit {
 		color: #F63623;
 		font-size: 28rpx;
+		&::before {
+			color: #F63623;
+		}
 	}
 </style>
