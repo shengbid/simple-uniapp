@@ -6,7 +6,24 @@
 			<navigator url="../detail/index?id=33" hover-class="navigator-hover">
 				<button type="default">跳转到详情页</button>
 			</navigator>
+			
 		</view>
+		<view>
+			<button type="primary" @click="ClickMe">我被点击了{{count}}次</button>
+		</view>
+		 <view class="image-content">
+			<image mode="aspectFit" style="width: 200px; height: 200px; background-color: #eeeeee;" :src="src"
+			></image>
+		</view>
+		<view class="common">
+			全局样式
+		</view>
+		<view class="box">测试的文字</view>
+		<view class="concat">
+			<uni-icons type="contact" size="30"></uni-icons>
+			<uni-icons type="arrowdown" size="30"></uni-icons>
+		</view>
+		<view class="icon-edit edit"></view>字体图标
 	</view>
 </template>
 
@@ -14,7 +31,9 @@
 	export default {
 		data() {
 			return {
-				title1: '我的主页'
+				title1: '我的主页',
+				count: 0,
+				src: 'https://img1.baidu.com/it/u=2969560901,1124562671&fm=26&fmt=auto'
 			}
 		},
 		onLoad() {
@@ -27,17 +46,21 @@
 			}, 1000);
 		},
 		methods: {
-
+			ClickMe () {
+				this.count++
+			}
 		}
 	}
 </script>
 
 <style>
+	@import url("./my.css");
+	@import url("/static/iconfont/style.css");
 	.content {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: center; */
 	}
 
 	.logo {
@@ -57,5 +80,18 @@
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;
+	}
+	.box {
+		width: 375rpx;
+		height: 375rpx;
+		background-color: #007AFF;
+	}
+	.concat {
+		width: 50rpx;
+		height: 50rpx;
+	}
+	.edit {
+		color: #F63623;
+		font-size: 28rpx;
 	}
 </style>

@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('~@/static/iconfont/fonts/icomoon.eot?4rmb7t');
+  src:  url('~@/static/iconfont/fonts/icomoon.eot?4rmb7t#iefix') format('embedded-opentype'),
+    url('~@/static/iconfont/fonts/icomoon.ttf?4rmb7t') format('truetype'),
+    url('~@/static/iconfont/fonts/icomoon.woff?4rmb7t') format('woff'),
+    url('~@/static/iconfont/fonts/icomoon.svg?4rmb7t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Finance:before {
+  content: "\e950";
+  color: #cdcfd2;
+}
+.icon-Document:before {
+  content: "\e951";
+  color: #cdcfd2;
+}
+.icon-ICON1:before {
+  content: "\e952";
+  color: #cdcfd2;
+}
+.icon-CRM:before {
+  content: "\e900";
+  color: #cdcfd2;
+}
+.icon-CRM_sm:before {
+  content: "\e901";
+  color: #cdcfd2;
+}
+.icon-Quotation:before {
+  content: "\e902";
+  color: #cdcfd2;
+}
+.icon-Quotation_sm:before {
+  content: "\e903";
+  color: #cdcfd2;
+}
+.icon-edit:before {
+  content: "\e904";
+  color: #cdcfd2;
+}
+.icon-Product:before {
+  content: "\e905";
+  color: #cdcfd2;
+}
+.icon-Product_sm:before {
+  content: "\e906";
+  color: #cdcfd2;
+}
+.icon-Member:before {
+  content: "\e907";
+  color: #cdcfd2;
+}
+.icon-Member_sm:before {
+  content: "\e908";
+  color: #cdcfd2;
+}
+.icon-error:before {
+  content: "\e909";
+  color: #f63623;
+}
+.icon-Order:before {
+  content: "\e90a";
+  color: #cdcfd2;
+}
+.icon-Order_sm:before {
+  content: "\e90b";
+  color: #cdcfd2;
+}
+.icon-Amount:before {
+  content: "\e90c";
+  color: #cdcfd2;
+}
+.icon-Amount_sm:before {
+  content: "\e90d";
+  color: #cdcfd2;
+}
+.icon-Workbench:before {
+  content: "\e90e";
+  color: #cdcfd2;
+}
+.icon-Workbench_sm:before {
+  content: "\e90f";
+  color: #cdcfd2;
+}
+.icon-grey_star:before {
+  content: "\e911";
+  color: #cdcfd2;
+}
+.icon-Role:before {
+  content: "\e912";
+  color: #cdcfd2;
+}
+.icon-Role_sm:before {
+  content: "\e913";
+  color: #cdcfd2;
+}
+.icon-BigData:before {
+  content: "\e914";
+  color: #cdcfd2;
+}
+.icon-BigData_sm:before {
+  content: "\e915";
+  color: #cdcfd2;
+}
+.icon-Enterprise:before {
+  content: "\e916";
+  color: #cdcfd2;
+}
+.icon-Enterprise_sm:before {
+  content: "\e917";
+  color: #cdcfd2;
+}
+.icon-calendar:before {
+  content: "\e918";
+  color: #cdcfd2;
+}
+.icon-Financing:before {
+  content: "\e919";
+  color: #cdcfd2;
+}
+.icon-Financing_sm:before {
+  content: "\e91a";
+  color: #cdcfd2;
+}
+.icon-Statistical:before {
+  content: "\e91b";
+  color: #cdcfd2;
+}
+.icon-Statistical_sm:before {
+  content: "\e91c";
+  color: #cdcfd2;
+}
+.icon-wechat:before {
+  content: "\e91e";
+  color: #00c800;
+}
+.icon-pdf .path1:before {
+  content: "\e91f";
+  color: rgb(238, 238, 238);
+}
+.icon-pdf .path2:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(105, 158, 254);
+}
+.icon-wait:before {
+  content: "\e92b";
+  color: #cdcfd2;
+}
+.icon-Email:before {
+  content: "\e92d";
+  color: #cdcfd2;
+}
+.icon-Email_sm:before {
+  content: "\e92e";
+  color: #cdcfd2;
+}
+.icon-Account:before {
+  content: "\e92f";
+  color: #cdcfd2;
+}
+.icon-Account_sm:before {
+  content: "\e930";
+  color: #cdcfd2;
+}
+.icon-correct:before {
+  content: "\e931";
+  color: #4cd321;
+}
+.icon-alipay:before {
+  content: "\e932";
+  color: #1296db;
+}
