@@ -19,10 +19,6 @@
 			全局样式
 		</view>
 		<view class="box">测试的文字</view>
-		<view class="concat">
-			<uni-icons type="contact" size="30"></uni-icons>
-			<uni-icons type="arrowdown" size="30"></uni-icons>
-		</view>
 		<view class="icon-edit edit"></view>字体图标
 	</view>
 </template>
@@ -37,7 +33,12 @@
 			}
 		},
 		onLoad() {
-
+			uni.getStorage({
+				key: 'type',
+				success: (res) => {
+					console.log(res)
+				}
+			})
 		},
 		onPullDownRefresh() {
 			console.log('refresh');

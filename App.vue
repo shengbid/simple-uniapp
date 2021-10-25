@@ -1,5 +1,11 @@
 <script>
 	export default {
+		globalData: {
+            loginInfo: {
+				account: '张三',
+				name: '张三公司'
+			}
+		},
 		onLaunch: function() {
 			console.log('App Launch')
 		},

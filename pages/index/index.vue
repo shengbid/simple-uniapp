@@ -20,6 +20,9 @@
 		<view class="name">
 			改变的名字{{name}}
 		</view>
+		<view>
+			全局信息{{login.account}}
+		</view>
 	</view>
 </template>
 
@@ -37,6 +40,7 @@
 					name: '张三',
 					age: 44
 				},
+				login: {},
 				list: [
 					{
 						id: 1,
@@ -57,7 +61,11 @@
 			}
 		},
 		onLoad() {
-
+			this.login = getApp().globalData.loginInfo
+			uni.setStorage({
+				key: 'type',
+				data: 'warning'
+			})
 		},
 		methods: {
 			changeName(name) {
@@ -66,7 +74,12 @@
 		},
 		onPullDownRefresh() {
 			console.log('refresh');
-			setTimeout(function () {
+			setTimeout(() => {
+				this.list.push({
+					id: 5,
+					name: '刷新的名称',
+					price: 888
+				})
 				uni.stopPullDownRefresh();
 			}, 1000);
 		}
