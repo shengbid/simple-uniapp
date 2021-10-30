@@ -20,6 +20,8 @@
 		</view>
 		<view class="box">测试的文字</view>
 		<view class="icon-edit edit"></view>字体图标
+		<button type="primary" @click="upload">上传图标</button>
+		<image :src="uploadImg" mode="aspectFit"></image>
 	</view>
 </template>
 
@@ -29,6 +31,7 @@
 			return {
 				title1: '我的主页',
 				count: 0,
+				uploadImg: '',
 				src: 'https://img1.baidu.com/it/u=2969560901,1124562671&fm=26&fmt=auto'
 			}
 		},
@@ -49,6 +52,28 @@
 		methods: {
 			ClickMe () {
 				this.count++
+			},
+			upload () {
+				uni.chooseImage({
+					sizeType:['original', 'compressed'],
+					success: (res) => {
+						const src = res.tempFilePaths[0]
+						this.uploadImg = src
+						console.log(src, res)
+						uni.previewImage({
+							urls: res.tempFilePaths,
+							longPressActions: {
+								itemList: ['发送给朋友', '保存图片', '收藏'],
+								success: function(data) {
+									console.log('选中了第' + (data.tapIndex + 1) + '个按钮,第' + (data.index + 1) + '张图片');
+								},
+								fail: function(err) {
+									console.log(err.errMsg);
+								}
+							}
+						})
+					}
+				})
 			}
 		}
 	}

@@ -22,7 +22,16 @@
 		{
 			"path": "pages/detail/index"
 		}
-	],
+	    ,{
+            "path" : "pages/list/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "列表",
+                "navigationBarBackgroundColor": "#007AFF"
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
@@ -43,11 +52,19 @@
 				"selectedIconPath": "static/home1.png"
 			},
 			{
+				"pagePath": "pages/list/index",
+				"iconPath": "static/home.png",
+				"selectedIconPath": "static/home1.png"
+			},
+			{
 				"pagePath": "pages/self/index",
 				"iconPath": "static/my.png",
 				"selectedIconPath": "static/my1.png"
 			}
 		]
+	},
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
 	}
 	// "condition": {
 	// 	"current": 0,
