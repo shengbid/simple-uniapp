@@ -21,8 +21,8 @@
 		},
 		{
 			"path": "pages/detail/index"
-		}
-	    ,{
+		},
+	    {
             "path" : "pages/list/index",
             "style" :                                                                                    
             {
@@ -30,7 +30,10 @@
                 "navigationBarBackgroundColor": "#007AFF"
             }
             
-        }
+        },
+		{
+			"path": "pages/tab"
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

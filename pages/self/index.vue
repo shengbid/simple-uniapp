@@ -6,6 +6,9 @@
 			<navigator url="../detail/index?id=33" hover-class="navigator-hover">
 				<button type="default">跳转到详情页</button>
 			</navigator>
+			<navigator url="../tab" hover-class="navigator-hover">
+				<button type="default">跳转到tab</button>
+			</navigator>
 			
 		</view>
 		<view>
