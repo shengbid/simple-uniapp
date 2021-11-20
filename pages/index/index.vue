@@ -23,6 +23,7 @@
 		<view>
 			全局信息{{login.account}}
 		</view>
+		<u-button @click="toTable">表格展示页面</u-button>
 	</view>
 </template>
 
@@ -70,6 +71,11 @@
 		methods: {
 			changeName(name) {
 				this.name = name
+			},
+			toTable(){
+				uni.navigateTo({
+					url: '/pages/table/index'
+				})
 			}
 		},
 		onPullDownRefresh() {

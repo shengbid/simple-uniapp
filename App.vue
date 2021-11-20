@@ -24,4 +24,7 @@
 	.common {
 		color: #4CD964;
 	}
+	// * {
+	// 	touch-action: none;
+	// }
 </style>
