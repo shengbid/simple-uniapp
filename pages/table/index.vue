@@ -73,59 +73,19 @@
 			</view>
 			
 		</view>
-		<!-- <view class="com-table">
-			<u-table class="title-table" :style="{width: titleWidth}">
-				<u-tr 
-					v-for="(item,index) in titleData" 
-					:key="index"
-					
-				>
-					<u-th>{{item}}</u-th>
-				</u-tr>
-			</u-table>
-			<scroll-view class="scroll-table-box" scroll-x="true" :style="{marginLeft: titleWidth, width: `calc(100% - ${titleWidth})`}" scroll-left="0">
-			
-				<u-table class="cotent-table">
-					<u-tr>
-						<u-td>浙江</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-						<u-td>浙江大学</u-td>
-					</u-tr>
-					<u-tr>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-						<u-td>二年级</u-td>
-					</u-tr>
-					<u-tr>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-						<u-td>20</u-td>
-					</u-tr>
-				</u-table>
-			</scroll-view>
-		</view> -->
-		
 
+		<com-table :tableData="tableData" :titleData="titleData">
+			
+		</com-table>
 	</view>
 </template>
 
 <script>
+	import ComTable from '@/components/ComTable'
 	export default{
+		components: {
+			ComTable
+		},
 		data(){
 			return {
 				titleData: [
@@ -141,11 +101,18 @@
 					{name: '深圳大学', class: '二年级', age: 20},
 					{name: '东北下下大学', class: '二年级', age: 20},
 					{name: '浙江大学', class: '二年级', age: 20},
-					{name: '浙江', class: '二年级', age: 20},
-					{name: '浙江大学', class: '二年级', age: 20},
-					{name: '浙江大学', class: '二年级', age: 20}
 				]
 			}
+		},
+		onShow() {
+			console.log(33)
+			setTimeout(()=> {
+					this.tableData.push(
+						{name: '浙江', class: '二年级', age: 20},
+						{name: '浙江大学', class: '二年级', age: 20},
+						{name: '浙江大学', class: '二年级', age: 20}
+					)
+			}, 300)
 		}
 	}
 </script>
@@ -207,18 +174,6 @@
 				border: 1px solid #fff;
 				padding: 10rpx;
 			}
-		}
-	}
-	.com-table {
-		.title-table {
-			position: absolute;
-		}
-		.scroll-table-box {
-			white-space: nowrap;
-		}
-		.cotent-table {
-			width: 200%;
-			white-space: normal;
 		}
 	}
 
