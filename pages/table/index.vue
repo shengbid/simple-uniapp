@@ -74,8 +74,15 @@
 			
 		</view>
 
-		<com-table :tableData="tableData" :titleData="titleData">
-			
+		<com-table :tableData="tableData" :titleData="titleData" width="80">
+			<template v-slot="{scope}">
+				<view v-if="scope.index === 2">
+					<u-button size="mini">查看详情</u-button>
+				</view>
+				<view v-else>
+					{{ scope.current }}
+				</view>
+			</template>
 		</com-table>
 	</view>
 </template>

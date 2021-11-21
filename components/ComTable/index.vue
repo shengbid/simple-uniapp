@@ -37,7 +37,8 @@
 							v-for="(subItem, si) in tableData"
 							:key="si"
 						>
-							{{subItem[item.key]}}
+							<slot :scope="{index: i, row: subItem, current: subItem[item.key]}">
+							</slot>
 						</view>
 					</view>
 				</view>
@@ -82,19 +83,19 @@
 					this.thWidth = this.titleWidth + 'px'
 					this.scrollWidth = this.width * leg + 'px'
 					this.contentWidth = this.width * leg + this.titleWidth + 'px'
-					console.log(this.thWidth, this.scrollWidth, this.contentWidth)
+					// console.log(this.thWidth, this.scrollWidth, this.contentWidth)
 				}
 			}
 		},
 		created() {
-			console.log(999)
 			if (this.tableData && this.tableData.length){
 				const leg = this.tableData.length
 				this.thWidth = this.titleWidth + 'px'
 				this.scrollWidth = this.width * leg + 'px'
 				this.contentWidth = this.width * leg + this.titleWidth + 'px'
-				console.log(this.thWidth, this.scrollWidth, this.contentWidth)
+				// console.log(this.thWidth, this.scrollWidth, this.contentWidth)
 			}
+			console.log(this, this.$slots)
 
 		}
 	}
